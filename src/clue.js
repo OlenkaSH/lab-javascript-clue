@@ -4,6 +4,7 @@
 
 const suspectsArray = [
   {
+    name: 'mrGreen',
     firstName: 'Jacob',
     lastName: 'Green',
     occupation: 'Enterpreneur',
@@ -14,6 +15,7 @@ const suspectsArray = [
     color: 'green'
   },
   {
+    name: 'drOrchid',
     firstName: 'Doctor',
     lastName: 'Orchid',
     occupation: 'Scientist',
@@ -23,6 +25,7 @@ const suspectsArray = [
     color: 'white'
   },
   {
+    name: 'profPlum',
     firstName: 'Victor',
     lastName: 'Plum',
     occupation: 'Decigner',
@@ -33,7 +36,8 @@ const suspectsArray = [
     color: 'purple'
   },
   {
-    firstName: 'Kasandry',
+    name: 'missScarlett',
+    firstName: 'Kasandra',
     lastName: 'Scarlet',
     occupation: 'Actor',
     age: 31,
@@ -42,6 +46,7 @@ const suspectsArray = [
     color: 'red'
   },
   {
+    name: 'mrsPeacock',
     firstName: 'Eleanor',
     lastName: 'Peacock',
     occupation: 'Socialite',
@@ -52,6 +57,7 @@ const suspectsArray = [
     color: 'blue'
   },
   {
+    name: 'mrMustard',
     firstName: 'Jack',
     lastName: 'Mustard',
     occupation: 'Retired Football player',
@@ -67,21 +73,21 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-  'Dining Room',
-  'Conservatory',
-  'Kitchen',
-  'Study',
-  'Library',
-  'Billiard Room',
-  'Lounge',
-  'Ballroom',
-  'Hall',
-  'Spa',
-  'Living Room',
-  'Observatory',
-  'Theater',
-  'Guest House',
-  'Patio'
+  { name: 'Dining Room' },
+  { name: 'Conservatory' },
+  { name: 'Kitchen' },
+  { name: 'Study' },
+  { name: 'Library' },
+  { name: 'Billiard Room' },
+  { name: 'Lounge' },
+  { name: 'Ballroom' },
+  { name: 'Hall' },
+  { name: 'Spa' },
+  { name: 'Living Room' },
+  { name: 'Observatory' },
+  { name: 'Theater' },
+  { name: 'Guest House' },
+  { name: 'Patio' }
 ];
 
 // Weapons Array
@@ -105,31 +111,30 @@ function selectRandom(arr) {
 }
 
 function pickMystery() {
-  let misteryEnvelope = {
+  let mysteryEnvelope = {
     room: selectRandom(roomsArray),
     weapon: selectRandom(weaponsArray),
-
     suspect: selectRandom(suspectsArray)
   };
 
-  return misteryEnvelope;
+  return mysteryEnvelope;
 }
 
 // ITERATION 3
 
-function revealMystery(envelop) {
+function revealMystery(mysteryEnvelope) {
   let mysteryArray = pickMystery();
-  console.log('=============>', envelop);
-  // return (
-  //   envelop.suspect.firstName +
-  //   ' ' +
-  //   envelop.suspect.lastName +
-  //   ' killed Mr.Boddy using the ' +
-  //   envelop.weapon.name +
-  //   ' in the ' +
-  //   envelop.room.name +
-  //   '!'
-  // );
+  //console.log('=============>', envelop);
+  /*return (
+    envelop.suspect.firstName +
+    ' ' +
+    envelop.suspect.lastName +
+    ' killed Mr.Boddy using the ' +
+    envelop.weapon.name +
+    ' in the ' +
+    envelop.room.name +
+    '!'
+  );*/
 }
 
 revealMystery();
